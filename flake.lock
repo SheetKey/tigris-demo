@@ -17,11 +17,11 @@
     },
     "flake-utils_2": {
       "locked": {
-        "lastModified": 1653893745,
-        "narHash": "sha256-0jntwV3Z8//YwuOjzhV2sgJJPt+HY6KhU7VZUL0fKZQ=",
+        "lastModified": 1659877975,
+        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
         "type": "github"
       },
       "original": {
@@ -47,16 +47,32 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1655141548,
-        "narHash": "sha256-jRaQL3CkmUKHBgxpXDIqDibaL/oSsGmVKWHIv312b1E=",
+        "lastModified": 1665753223,
+        "narHash": "sha256-RsRUlQG3WaeqdWvuCaPvjptMEoq4yck2Gsj0lTklbk0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "77c7a237fa64a9cdffec5dcfbf5c64fcb0b5f966",
+        "rev": "6594eb2fc86e22005f48aaeb1011b5a72d99e58e",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "rhine-unstable": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665580472,
+        "narHash": "sha256-hkFexICeoK2qpkUt4tDQq3cfQ5DLzFFqwH4teNnVE9I=",
+        "owner": "turion",
+        "repo": "rhine",
+        "rev": "3bae3ddfa1ee70b8487e214f09a80c75b34f7398",
+        "type": "github"
+      },
+      "original": {
+        "owner": "turion",
+        "repo": "rhine",
         "type": "github"
       }
     },
@@ -70,14 +86,15 @@
     "tigris-input": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "rhine-unstable": "rhine-unstable"
       },
       "locked": {
-        "lastModified": 1663623915,
-        "narHash": "sha256-/ssBYpPloUlAYLjeRjRkHPdPJK9uPBI6RGAcVOyESNE=",
+        "lastModified": 1665843678,
+        "narHash": "sha256-cq0C3U0tK3QCM2cfb+0flCgedVQrsoSmWMobehlVFk4=",
         "owner": "SheetKey",
         "repo": "tigris",
-        "rev": "03a8d2ebce9b8addc4c1d0363fd886d398bc44f6",
+        "rev": "92b8f51640ed1c26a44dbcb146da7d3a02308f31",
         "type": "github"
       },
       "original": {

@@ -1,5 +1,5 @@
 cabal-version:      2.4
-name:               Example
+name:               tigris-demo
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
@@ -23,7 +23,7 @@ extra-source-files:
     CHANGELOG.md
     README.org
 
-executable example
+executable tigris-demo
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
@@ -32,7 +32,6 @@ executable example
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     build-depends:    base ^>=4.15.1.0
-                    , dunai
                     , tigris
     hs-source-dirs:   app
     default-language: Haskell2010

@@ -19,7 +19,7 @@
 
         haskellPackages = pkgs.haskellPackages;
 
-        packageName = "Example";
+        packageName = "tigris-demo";
         jailbreakUnbreak = pkg:
           pkgs.haskell.lib.doJailbreak (pkg.overrideAttrs (_: { meta = { }; }));
 
