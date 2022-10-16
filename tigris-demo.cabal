@@ -22,6 +22,7 @@ maintainer:         wveatchw@gmail.com
 extra-source-files:
     CHANGELOG.md
     README.org
+    sprites/**/*.png
 
 executable tigris-demo
     main-is:          Main.hs
@@ -33,5 +34,8 @@ executable tigris-demo
     -- other-extensions:
     build-depends:    base ^>=4.15.1.0
                     , tigris
+                    , rhine
+                    , text
+                    , apecs
     hs-source-dirs:   app
     default-language: Haskell2010
