@@ -32,6 +32,7 @@ clsfLoop =
   >>> borderCollision
   >>> normVelocity
   >>> setPosition
+  >>> cameraProcess
   >>> updateDestination
   >>> incFrame
 
@@ -44,10 +45,7 @@ rhineLoop
                                 (HoistClock IO (SystemT World IO) Busy)
                               )
                               (ParClockS IO (HoistClock IO (SystemT World IO) (Millisecond 16))
-                                (ParClockS IO
-                                  WindowResizeClock
-                                  (HoistClock IO (SystemT World IO) (Millisecond 16))
-                                )
+                                            WindowResizeClock
                               )
                 )
                 (HoistClock IO (SystemT World IO) (Millisecond 16))
@@ -56,12 +54,7 @@ rhineLoop
 rhineLoop world =
   (handleEvent world ||@ (concurrentlySystem world) @||
     (clsfLoop @@ (HoistClock waitClock liftIO) ||@ (concurrentlySystem world) @||
-     Rhine cameraProcess 
-           (ParallelClock
-            WindowResizeClock
-             (HoistClock waitClock liftIO)
-             (concurrentlySystem world)
-           )
+     (cameraSizeOnWindowResize @@ WindowResizeClock)
     )
   )
   ||@ (concurrentlySystem world) @||
@@ -71,6 +64,6 @@ gameLoop :: World -> SystemT' IO ()
 gameLoop world = do
   player
   set global $ Camera $ mkRect 0 0 800 600
-  setReadOnly global $ TileMapSize $ V2 1000 1000
+  setReadOnly global $ TileMapSize $ V2 2000 1500
   flow $ rhineLoop world
 
