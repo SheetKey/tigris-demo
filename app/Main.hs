@@ -29,6 +29,8 @@ clsfLoop :: MonadIO m => ClSFS m (HoistClock IO (SystemT World m) (Millisecond 1
 clsfLoop =
   rotateTowardsMouse
   >>> normVelocity
+  >>> borderCollision
+  >>> normVelocity
   >>> setPosition
   >>> updateDestination
   >>> incFrame
@@ -69,6 +71,6 @@ gameLoop :: World -> SystemT' IO ()
 gameLoop world = do
   player
   set global $ Camera $ mkRect 0 0 800 600
-  setReadOnly global $ TileMapSize $ V2 800 600
+  setReadOnly global $ TileMapSize $ V2 1000 1000
   flow $ rhineLoop world
 

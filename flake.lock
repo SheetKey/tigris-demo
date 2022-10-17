@@ -90,11 +90,11 @@
         "rhine-unstable": "rhine-unstable"
       },
       "locked": {
-        "lastModified": 1665950583,
-        "narHash": "sha256-ObZimjVdn7swEGP4VUL9UQ+lKrspyBmncc7p9YZgAMs=",
+        "lastModified": 1666045533,
+        "narHash": "sha256-0A+QdLjJZvUsth06T+f6l9cnbeiR4r3rGvc/SPJ9AJA=",
         "owner": "SheetKey",
         "repo": "tigris",
-        "rev": "57eff725320cab5e298c8c31dfe0c0a8886cf19a",
+        "rev": "98e2b8d1f9c307098a7c1d7e44f1a794f6e9d422",
         "type": "github"
       },
       "original": {
