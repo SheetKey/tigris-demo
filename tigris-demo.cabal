@@ -37,5 +37,9 @@ executable tigris-demo
                     , rhine
                     , text
                     , apecs
+                    , criterion
+                    , vector
     hs-source-dirs:   app
     default-language: Haskell2010
+
+    ghc-options:      -rtsopts
